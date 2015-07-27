@@ -34,8 +34,8 @@ if ! [ -e $CACHE_DIR/$FONTS_PACKAGE ]; then
   curl $FONTS_PACKAGE -L -s -o $CACHE_DIR/$FONTS_FILE_NAME
 fi
 
-mkdir -p $BUILD_DIR/usr/share/fonts/
-tar -xvf $CACHE_DIR/$FONTS_FILE_NAME -C $BUILD_DIR/usr/share/fonts/
+mkdir -p $BUILD_DIR/.fonts/
+tar -xvf $CACHE_DIR/$FONTS_FILE_NAME -C $BUILD_DIR/.fonts/
 
 echo "-----> exporting PATH and LIBRARY_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
